@@ -4,6 +4,10 @@ set -euo pipefail
 IFS=$'\n\t'
 
 # check if root
+if [ "$EUID" -ne 0 ]; then
+   >&2 /bin/echo "Please run as root"
+   exit 1
+fi
 
 # check we are on a Raspberry Pi
 cat /proc/cpuinfo
@@ -12,7 +16,7 @@ execs=("/bin/echo")
 for exec in "${execs[@]}"; do
     if [ ! -x "${exec}" ]; then
 	>&2 /bin/echo "${0}: ${exec} required"
-	exit 1;
+	exit 1
     fi
 done
 
@@ -26,5 +30,6 @@ read username
 
 # sudo
 
-# if pi user still exist, ask to delete (default no)
-# if yes, delete user, group, home folder
+# print command to:
+# delete user, group, home folder
+# warn to logout and run as other user
