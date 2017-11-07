@@ -17,9 +17,9 @@ for exec in "${execs[@]}"; do
     fi
 done
 
-/bin/echo -n "Type the desired username: "
-read -r username
+/bin/echo -n "Type the desired login: "
+read -r login
 
-/usr/sbin/useradd --create-home --shell /bin/bash --user-group --groups adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi "${username}"
+/usr/sbin/useradd --create-home --shell /bin/bash --user-group --groups adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi "${login}"
 
-/usr/bin/passwd "${username}"
+/usr/bin/passwd "${login}"
