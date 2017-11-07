@@ -9,10 +9,7 @@ if [ "$EUID" -ne 0 ]; then
    exit 1
 fi
 
-# check we are on a Raspberry Pi
-cat /proc/cpuinfo
-
-execs=("/bin/echo")
+execs=("/bin/echo" "/usr/bin/passwd" "/usr/sbin/useradd")
 for exec in "${execs[@]}"; do
     if [ ! -x "${exec}" ]; then
 	>&2 /bin/echo "${0}: ${exec} required"
@@ -21,15 +18,8 @@ for exec in "${execs[@]}"; do
 done
 
 /bin/echo -n "Type the desired username: "
-read username
+read -r username
 
-# if username does not exist, create it
+/usr/sbin/useradd --create-home --shell /bin/bash --user-group --groups adm,dialout,cdrom,sudo,audio,video,plugdev,games,users,input,netdev,gpio,i2c,spi "${username}"
 
-# if username pi still exist, copy groups (except pi) to new username
-# otherwise use default group list
-
-# sudo
-
-# print command to:
-# delete user, group, home folder
-# warn to logout and run as other user
+/usr/bin/passwd "${username}"
