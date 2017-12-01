@@ -9,7 +9,7 @@ if [ "$EUID" -ne 0 ]; then
    exit 1
 fi
 
-execs=("/bin/echo" "/usr/bin/passwd" "/usr/sbin/useradd")
+execs=("/usr/bin/passwd" "/usr/sbin/useradd")
 for exec in "${execs[@]}"; do
     if [ ! -x "${exec}" ]; then
 	>&2 /bin/echo "${0}: ${exec} required"
