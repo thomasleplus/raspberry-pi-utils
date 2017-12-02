@@ -2,7 +2,7 @@
 
 This is a collection of useful Raspberry Pi shell scripts.
 
-*These scripts have only been tested with the Raspbian Linux distro.*
+**These scripts have only been tested with the Raspbian Linux distro.**
 
 Each of these scripts are designed to be executable directly from GitHub using a simple one-liner like:
 
