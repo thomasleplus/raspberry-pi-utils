@@ -7,13 +7,26 @@ This is a collection of useful Raspberry Pi shell scripts.
 Each of these scripts are designed to be executable directly from GitHub using a simple one-liner like:
 
 ```sh
-sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi-utils/master/setup/create-new-login.sh)
+sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi-utils/master/setup/script.sh)
 ```
+
 But for more advanced (or security-conscious) users, I always recommend downloading scripts and reviewing them before executing them, especially when using `sudo`.
 
-## [Setup](setup)
+## configure-LEDs.sh
 
-These scripts are typically used during the initial configuration of a new Raspberry Pi.
+This script lets you configure the LEDs in an interactive way.
+
+```sh
+sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi-utils/master/setup/configure-LEDs.sh)
+```
+
+## create-new-login.sh
+
+This script creates a new user account in an interactive way.
+
+```sh
+sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi-utils/master/create-new-login.sh)
+```
 
 ## See also
 
