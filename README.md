@@ -2,6 +2,8 @@
 
 This is a collection of useful Raspberry Pi shell scripts.
 
+[![ShellCheck](https://github.com/thomasleplus/raspberry-pi-utils/workflows/ShellCheck/badge.svg)](https://github.com/thomasleplus/raspberry-pi-utils/actions?query=workflow:"ShellCheck")
+
 **These scripts have only been tested with the Raspbian Linux distro.**
 
 Each of these scripts are designed to be executable directly from GitHub using a simple one-liner like:
