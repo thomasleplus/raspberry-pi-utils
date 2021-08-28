@@ -1,4 +1,4 @@
-# raspberry-pi-utils
+# Raspberry Pi utilities
 
 This is a collection of useful Raspberry Pi shell scripts.
 
