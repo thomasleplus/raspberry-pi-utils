@@ -14,7 +14,7 @@ sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi
 
 But for more advanced (or security-conscious) users, I always recommend downloading scripts and reviewing them before executing them, especially when using `sudo`.
 
-## configure-LEDs.sh
+## [Configure LEDs](configure-LEDs.sh)
 
 This script lets you configure the LEDs in an interactive way.
 
@@ -22,7 +22,7 @@ This script lets you configure the LEDs in an interactive way.
 sudo bash <(curl -sS https://raw.githubusercontent.com/thomasleplus/raspberry-pi-utils/master/configure-LEDs.sh)
 ```
 
-## create-new-login.sh
+## [Create new login](create-new-login.sh)
 
 This script creates a new user account in an interactive way.
 
