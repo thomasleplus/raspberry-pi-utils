@@ -9,7 +9,7 @@ if [ "${EUID}" -ne 0 ]; then
 fi
 
 execs=("/bin/grep" "/bin/sed" "/usr/bin/tee")
-for exec in "${execs[@]}"; do
+for exec in "${execs[@]+"${execs[@]}"}"; do
     if [ ! -x "${exec}" ]; then
 	>&2 \echo "${0}: ${exec} required"
 	exit 1
