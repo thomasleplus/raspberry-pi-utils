@@ -5,7 +5,6 @@ rules:
       allow:
         - actions/*
         - docker/*
-        - docker://leplusorg/*
         - github/codeql-action/*
         - google/osv-scanner-action/*
         - microsoft/DevSkim-Action
