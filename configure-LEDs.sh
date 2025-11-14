@@ -20,7 +20,7 @@ set_dtparam() {
 	if \grep -q "^dtparam=${1}" /boot/config.txt; then
 		\sed -i "s/^dtparam=${1}/dtparam=${2}/g" /boot/config.txt
 	else
-		echo "dtparam=${2}" | \tee -a /boot/config.txt >/dev/null
+		\tee -a /boot/config.txt <<< "dtparam=${2}" >/dev/null
 	fi
 }
 
